@@ -33,13 +33,15 @@ async function login(num) {
         const val = document.getElementById('pw2').value
         globalPassword = val
 
-        getLocationDetails('10', globalPassword)
+        getLocationDetails('10', val)
 
     }
 
     if(num = '0') {
         const val = document.getElementById('pw1').value
         globalPassword = val;
+
+        getLocationDetails('10', val)
     }
 
 
