@@ -1,3 +1,5 @@
+let globalPassword;
+
 async function getLocationDetails(quanity, password) {
 
     try {
@@ -13,7 +15,7 @@ async function getLocationDetails(quanity, password) {
         return req.json()
     }
 
-    throw new Error('Something went wrong, client')
+    throw new Error('An error occurered, ensure password is correct and try again.')
 
 } catch {
     return "Error"
@@ -24,3 +26,21 @@ async function getLocationDetails(quanity, password) {
 async function manageLocationDetails(params) {
     
 }
+
+async function login(num) {
+
+    if(num = '1') {
+        const val = document.getElementById('pw2').value
+        globalPassword = val
+
+        getLocationDetails('10', globalPassword)
+
+    }
+
+    if(num = '0') {
+        const val = document.getElementById('pw1').value
+        globalPassword = val;
+    }
+
+
+} 
