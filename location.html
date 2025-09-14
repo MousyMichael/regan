@@ -8,7 +8,7 @@
     <div class="title">
         <h1>RENIG Location Viewer</h1>
         <h2>Developed by MousyMichael</h2>
-        <button onclick="getLocationDetails()">Refresh Location Data</button>
+        <button class="refresh">Login to use this function</button>
     </div>
 
     <div class="curr">
@@ -22,8 +22,8 @@
         <div class="login">
 
             <h4>Enter your password to load information </h4>
-            <input placeholder="Password" type="password">
-            <p>Click Enter To Submit</p>
+            <input id="pw1" placeholder="Password" type="password">
+            <p onclick="login('0')" class="log">Login</p>
         </div>
         
     </div>
@@ -33,8 +33,8 @@
          <div class="login">
 
             <h4>Enter your password to load information </h4>
-            <input placeholder="Password" type="password">
-            <p>Click Enter To Submit</p>
+            <input id="pw2" placeholder="Password" type="password">
+            <p onclick="login('1')" class="log">Login</p>
         </div>
     </div>
 
@@ -43,6 +43,20 @@
 <script src="locationManager.js" defer></script>
 
 <style>
+    .refresh {
+        color: lime;
+        background-color: transparent;
+        border: none;
+        font-size: 15px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .log {
+        color: lime !important;
+        text-decoration: underline;
+        cursor: pointer;
+    }
 
     .login {
         margin-top: 20px;
