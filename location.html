@@ -1,0 +1,116 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location</title>
+</head>
+<body>
+    <div class="title">
+        <h1>RENIG Location Viewer</h1>
+        <h2>Developed by MousyMichael</h2>
+        <button onclick="getLocationDetails()">Refresh Location Data</button>
+    </div>
+
+    <div class="curr">
+        <h3>Current Location</h3>
+        <div class="curr-deets">
+            <p id="currloc"> Login to view</p>
+            <p style="margin-left: 10px; margin-right: 10px; ">•</p>
+            <p id="date">Last Update: - - -</p>
+        </div>
+
+        <div class="login">
+
+            <h4>Enter your password to load information </h4>
+            <input placeholder="Password" type="password">
+            <p>Click Enter To Submit</p>
+        </div>
+        
+    </div>
+
+    <div class="historical">
+        <h3>Past Locations</h3>
+         <div class="login">
+
+            <h4>Enter your password to load information </h4>
+            <input placeholder="Password" type="password">
+            <p>Click Enter To Submit</p>
+        </div>
+    </div>
+
+</body>
+
+<script src="locationManager.js" defer></script>
+
+<style>
+
+    .login {
+        margin-top: 20px;
+        border: 1px solid rgb(86, 86, 86);
+        padding: 20px
+    }
+
+    .login >p {
+        margin-top: 8px;
+        color: gray;
+        font-size: 15px;
+    }
+
+    .login > input {
+        background-color: rgb(70, 70, 70);
+        border: none;
+        padding: 5px; 
+        font-size: 20px;
+        width: 300px;
+        height: 40px;
+        margin-top: 10px;
+    }
+
+* {
+    padding:0px;
+    margin: 0px;
+    font-family: arial;
+    color: white;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body > p {
+    font-weight: 100;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title > h2 {
+    color: gray;
+    font-weight: 100;
+}
+
+.curr-deets {
+    flex-direction: row;
+    width: 100%;
+    display: flex;
+}
+
+.curr,.historical {
+    width: 95%;
+    margin-top: 20px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    border: 1px solid rgb(57, 57, 57);
+    padding: 25px;
+}
+</style>
+
+</html>
